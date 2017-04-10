@@ -126,7 +126,7 @@ def add_book(request):
 def add_img():
     pass
 def view_book_list():
-
+    pass
 
 def detail():
     pass
