@@ -12,15 +12,15 @@
                         <a href="{% url 'view_book_list' %}" class="list-group-item" id="id_category_all">
                             全部图书
                         </a>
-                        {% for category in category_list %}
-                            <a href="{% url 'view_book_list' %}?category={{ category }}" class="list-group-item"
-                               id="id_category_{{ category }}">
-                                {{ category }}
-                            </a>
-                        {% endfor %}
+{#                        {% for category in category_list %}#}
+{#                            <a href="{% url 'view_book_list' %}?category={{ category }}" class="list-group-item"#}
+{#                               id="id_category_{{ category }}">#}
+{#                                {{ category }}#}
+{#                            </a>#}
+{#                        {% endfor %}#}
                     </div>
                     <script type="text/javascript">
-                        $('#id_category_{{ query_category }}').addClass("active");
+{#                        $('#id_category_{{ query_category }}').addClass("active");#}
                     </script>
                 </div>
                 <div class="col-md-9 col-md-offset-1">
@@ -57,7 +57,7 @@
                         {% for book in book_list %}
                             <tr>
                                 <td>{{ forloop.counter }}</td>
-                                <td><a href="{% url 'detail' %}?id={{ book.id }}">{{ book.name }}</a></td>
+                                <td><a href="{% url 'detail' %}?id={{ book.id }}">{{ book.title }}</a></td>
                                 <td>{{ book.author }}</td>
                                 <td>{{ book.publish_date|date:"Y-m-d" }}</td>
                                 <td>{{ book.price|floatformat:2 }}</td>

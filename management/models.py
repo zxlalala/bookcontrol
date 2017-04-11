@@ -9,6 +9,7 @@ class Book(models.Model):
     author = models.CharField(max_length=128)
     price = models.FloatField()
     publish_date = models.DateField()
+    # category = models.CharField(max_length=128)
 
     def __unicode__(self):
         return self.title
